@@ -1,3 +1,9 @@
+function age(userAge){
+    alert('a idade do user é '+ userAge);
+  }
+
+
+
 function helloWorld() {
   //lança um popup
   //alert("Olá Mundo!");
@@ -19,6 +25,8 @@ function stringFunction() {
 }
 
 function multimediaInfo() {
+
+  age(16)
   // let courseName = "Técnico de Produtos Multimédia";
   // let couseHours = 1500;
 
@@ -26,8 +34,16 @@ function multimediaInfo() {
     name: "Técnico de Produtos Multimédia",
     hours: 1500,
     responsible: "Cristina",
-    students: ['Luis', 'Vanessa', 'Felisberto']
+    students: ["Luis", "Vanessa", "Felisberto"],
   };
+
+  // for(let i=0; i<course.students.length; i++){
+  //   alert('o/a estudante é '+course.students[i]);
+
+  // }
+  for (let element of course.students) {
+    alert("o/a estudante é " + element);
+  }
 
   alert("o nome do curso é " + course.name);
   alert("o curso tem " + course.hours + "h");
@@ -39,5 +55,12 @@ function multimediaInfo() {
     course.hours = userHours;
   }
   alert("o curso tem " + course.hours + "h");
-  alert("o primeiro aluno a ser inscrito foi o "+course.students[0])
+  alert("o primeiro aluno a ser inscrito foi o " + course.students[0]);
+}
+
+function yourAge(){
+
+  let myUserAge = prompt('Qual é a tua idade?');
+  age(myUserAge);
+
 }

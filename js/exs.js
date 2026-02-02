@@ -31,3 +31,21 @@ function productInfo() {
   product.price = 2.55;
   alert("o preço é " + product.price);
 }
+
+//pp 41
+function Compras() {
+  let shoppingList = [];
+
+  let newItem = prompt("Quer acrescentar um item? Diz s/n");
+  while (newItem !== "n") {
+    newItem = prompt("Qual o produto que pretende acrescentar?");
+    if (newItem !== "n") {
+      shoppingList.push(newItem);
+    }
+  }
+  for (let element of shoppingList) {
+    alert("A tua nova lista de compras é " + element);
+  }
+}
+
+
